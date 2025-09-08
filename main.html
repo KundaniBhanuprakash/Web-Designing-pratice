@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Dashboard</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>Springboard</h2>
+    <ul>
+      <li onclick="toggleDropdown(this)">My Dashboard
+        <ul class="dropdown">
+          <li>Overview</li>
+          <li>Progress</li>
+        </ul>
+      </li>
+      <li onclick="toggleDropdown(this)">My Assignments
+        <ul class="dropdown">
+          <li>Pending</li>
+          <li>Completed</li>
+        </ul>
+      </li>
+      <li onclick="toggleDropdown(this)">My Interests
+        <ul class="dropdown">
+          <li>Technology</li>
+          <li>Business</li>
+        </ul>
+      </li>
+      <li>My Learning</li>
+      <li>Jobs</li>
+      <li>Achievements</li>
+      <li>Settings</li>
+    </ul>
+    
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <span class="menu-toggle" onclick="toggleSidebar()">☰</span>
+      <div class="logo">Explore</div>
+      <div class="search-bar">
+        <input type="text" placeholder="What do you want to learn?">
+      </div>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="profile-header">
+      <div class="profile-pic"></div>
+      <div class="profile-info">
+        <h2>KUNDHANI BHANU</h2>
+        <p>Email: bhanuprakashmdpl@gmail.com</p>
+        <p>Phone: +91-9000890519</p>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+      <div class="card">
+        <h3>Learning Hours</h3>
+        <p>40h 3m this fiscal year</p>
+      </div>
+      <div class="card">
+        <h3>Badges</h3>
+        <p>You have earned a new badge</p>
+      </div>
+    </div>
+  </div>
+  <!-- Example interactive element -->
+   <div>
+  <h2 id="text" onmouseover="makebold()" onmouseout="normal()">Hello World!</h2>
+  <button id="btn">Change Color</button>
+   <input type="text" id="inputblock"  rows="4" cols="40" onkeyup="showText()">
+    <p id="display"></p>
+
+  <script>
+    document.getElementById("btn").onclick = function() {
+      document.getElementById("text").style.color = "red";
+    };
+
+    function makebold() {
+      document.getElementById("text").style.fontWeight = "bold";
+    }
+
+    function normal() {
+      document.getElementById("text").style.fontWeight = "normal";
+    }
+
+    function showText() {
+      let input = document.getElementById("inputblock").value;
+      document.getElementById("display").innerHTML = "you typed : " + input ;
+    }
+  </script>
+  </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
